@@ -1,0 +1,53 @@
+div#board {
+    position: relative;
+    width: 1024px;
+    height: 863px;
+    margin: auto;
+}
+
+table {
+    position: absolute;
+    left: 173px;
+    top: 98px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+td {
+    width: 94px;
+    height: 94px;
+    border: 1px solid #333;
+}
+td.miss {
+    background: black;
+}
+td.hit {
+    background: red;
+}
+
+ol.alpha {
+    list-style: upper-latin;
+}
+
+#labels {
+    position: absolute;
+    left: 110px;
+    top: 46px;
+    font-size: 54px;
+    line-height: 98px;
+}
+#labels ol {
+    list-style-position: inside;
+    padding: 0;
+    text-align: center;
+}
+ol.horizontal {
+    position: absolute;
+    top: -93px;
+    left: 73px;
+    width: 680px;
+}
+ol.horizontal li {
+    float: left;
+    width: 97px;
+}
