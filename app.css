@@ -1,3 +1,17 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+}
+form {
+    text-align: center;
+    top: 820px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+}
+#message-area {
+    margin-top: 10px;
+}
 div#board {
     position: relative;
     width: 1024px;

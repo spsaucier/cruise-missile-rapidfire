@@ -150,7 +150,7 @@ let controller = {
     parseGuess: function (guess) {
         // Processes the guesses and passes them to the model. Detects the end of the game.
         let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-        let alertError = 'Please enter a letter and a number on the board between A' + (model.boardSize) + ' and ' + alphabet[alphabet.length - 1] + (model.boardSize);
+        let alertError = 'Please enter a letter and a number on the board between A' + (model.boardSize - 1) + ' and ' + alphabet[alphabet.length - 1] + (model.boardSize - 1);
 
         if (guess === null || guess.length !== 2) {
             alert(alertError);
@@ -165,7 +165,7 @@ let controller = {
             // validating user input
             if (isNaN(row) || isNaN(column)) {
                 alert(alertError);
-            } else if (row < 0 || row >= model.boardSize || column < 0 || column - 1 >= model.boardSize) {
+            } else if (row < 0 || row >= model.boardSize || column < 0 || column >= model.boardSize) {
                 alert(alertError);
             } else {
                 return row + column;
@@ -226,8 +226,9 @@ function handleKeyPress (e) {
 window.onload = init;
 
 // Paltry unit tests
-console.log(controller.parseGuess("a1") === "01");
-console.log(controller.parseGuess("G7") === "67");
+console.log("If all the below are true, unit tests are passing");
+console.log(controller.parseGuess("a0") === "00");
+console.log(controller.parseGuess("G6") === "66");
 console.log(model.isSunk({
     locations: [0, 0, 0],
     hits: ['', 'hit', '']
